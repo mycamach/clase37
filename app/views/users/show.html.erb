@@ -3,6 +3,19 @@
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
+  <% @user.projects.each do |project| %>
+    <%= project.name %>
+    <% link_to
+  <% end %>
+
+<hr>
+
+<% @projects.each do |project| %>
+
+  <%= project.name %>
+  <%= link_to 'Assign project', allocations_path(project_id: project.id, user_id: @user.id), method: :post %>
+<% end %>
+
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

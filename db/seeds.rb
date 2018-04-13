@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+12.times do |i|
+  User.create(name: "Person #{i+1}")
+  Project.create(name: "Project #{i+1}")
+end
